@@ -9,13 +9,10 @@ include:
 targets:
   # The 'dev' target, for development purposes. This target is the default.
   dev:
-    mode: development
-    default: true
     workspace:
       root_path: /Sahred/GitHub/dev
   # The 'prod' target, used for production deployment.
   prod:
-    mode: production
     workspace:
       # We always use /Users/kremlinhuamansantos@gmail.com for all resources to make sure we only have a single copy.
       root_path: /Sahred/GitHub/prd
