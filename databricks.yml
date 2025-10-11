@@ -10,10 +10,10 @@ targets:
   # The 'dev' target, for development purposes. This target is the default.
   dev:
     workspace:
-      root_path: /Sahred/GitHub/dev
+      root_path: /Shared/GitHub/dev
   # The 'prod' target, used for production deployment.
   prod:
     workspace:
       # We always use /Users/kremlinhuamansantos@gmail.com for all resources to make sure we only have a single copy.
-      root_path: /Sahred/GitHub/prd
+      root_path: /Shared/GitHub/prd
 
