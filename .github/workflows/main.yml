@@ -39,17 +39,17 @@ jobs:
         run: |
           databricks bundle deploy --target dev
 
-  deploy_qas:
-    name: Deploy to Qas
+  deploy_prod:
+    name: Deploy to Prod
     needs: deploy_dev
     runs-on: ubuntu-latest
-    environment: qas   # approvals obligatorios aquí
+    environment: prod   # approvals obligatorios aquí
     steps:
       - uses: actions/checkout@v4
       - uses: databricks/setup-cli@main
-      - name: Deploy (qas)
+      - name: Deploy (Prod)
         env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST_QAS }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN_QAS }}
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST_DEV }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_HOST_DEV }}
         run: |
           databricks bundle deploy --target prod
