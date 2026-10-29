@@ -50,6 +50,6 @@ jobs:
       - name: Deploy (Prod)
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST_DEV }}
-          DATABRICKS_TOKEN: secrets.DATABRICKS_TOKEN_DEV
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN_DEV }}
         run: |
           databricks bundle deploy --target prod
